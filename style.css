@@ -1,0 +1,233 @@
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #8b5cf6;
+  --secondary-dark: #7c3aed;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/free-fire-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111827);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blue-gradient {
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: #ffffff;
+}
+
+.purple-gradient {
+  background: linear-gradient(to right, var(--secondary), var(--secondary-dark));
+  color: #ffffff;
+}
+
+.white-button {
+  background-color: #ffffff;
+  color: var(--primary);
+}
+
+.purple-text {
+  color: var(--secondary);
+}
+
+.blue-text {
+  color: var(--primary);
+}
+
+.method-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.method-button:hover {
+  transform: scale(1.05);
+}
+
+.method-button.active {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.method-card {
+  background-color: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.method-card:hover {
+  transform: scale(1.02);
+}
+
+.method-card .arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.method-card:hover .arrow {
+  opacity: 1;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
